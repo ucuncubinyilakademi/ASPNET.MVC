@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+
+    DateTime dateTime = DateTime.Now;
+}
+<style>
+    body{
+        font-size:24px;
+    }
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DateTimeFormatlama</title>
+</head>
+<body>
+    <div>
+        @dateTime<br />
+        @("dd : "+String.Format("{0:dd}",dateTime))<br />
+        @("MM : "+String.Format("{0:MM}",dateTime))<br />
+        @("yy : "+String.Format("{0:yy}",dateTime))<br />
+        @("ddd : "+String.Format("{0:ddd}",dateTime))<br />
+        @("MMM : "+String.Format("{0:MMM}",dateTime))<br />
+        @("yyy : "+String.Format("{0:yyy}",dateTime))<br />
+        @("dddd : "+String.Format("{0:dddd}",dateTime))<br />
+        @("MMMM : "+String.Format("{0:MMMM}",dateTime))<br />
+        @("yyyy : "+String.Format("{0:yyyy}",dateTime))<br />
+        <br /><br /><br />
+        @("HH : "+String.Format("{0:HH}",dateTime))<br />
+        @("mm : "+String.Format("{0:mm}",dateTime))<br />
+        @("ss : "+String.Format("{0:ss}",dateTime))<br />
+
+    </div>
+</body>
+</html>

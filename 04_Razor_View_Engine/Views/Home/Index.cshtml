@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+@{
+    string ad = "ALTAN EMRE";
+    string soyad = "DEMİRCİ";
+}
+
+
+
+<!--RAZOR SYNTAX: Html kodları içinde yazılım(C#) komutları yazmayı sağlar. @@ işareti ile tanımlanır.-->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*burası yorum satırı*@
+
+        @ad<br />
+        @soyad<br />
+
+        @{
+            string[] isimler = new string[3] { "Uras", "Kıvanç", "Kerem" };
+
+            for (int i = 0; i < isimler.Length; i++)
+            {
+                @isimler[i]<br />
+            }
+        }
+        <br /><br />
+        <ul>
+            @{
+                foreach (var item in isimler)
+                {
+                    <li>@item</li>
+                }
+            }
+        </ul>
+        <br /><br />
+        @{ int[] sayilar = { 1, 2, 3, 4, 5 }; }
+        @for (int i = 0; i < sayilar.Length; i++)
+        {
+            if (sayilar[i] % 2 == 0)
+            {
+                <h1>@(sayilar[i]*2)</h1>
+            }
+            else
+            {
+                <h3>@sayilar[i]</h3>
+            }
+        }
+    </div>
+</body>
+</html>

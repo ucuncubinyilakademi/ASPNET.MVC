@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div>
+        <a href="/Home/Index">ANASAYFA</a>
+        @Html.ActionLink("HAKKIMIZDA", "About")
+        <a href="@Url.Action("About","Home")">HAKKIMIZDA</a>
+        <br /><br /><br />
+
+
+        <input type="text" name="ad" value="" /><br />
+        @Html.TextBox("ad")<br />
+        <textarea name="aciklama" rows="10" cols="30"></textarea><br />
+        @Html.TextArea("aciklama", new { @rows = "10", @cols = "30" })
+        <br /><br /><br />
+
+        @Html.ActionLink("HAKKIMIZDA", "About2", new { ad = "Altan Emre" })
+        <a href = "/Home/About2?ad=Altan%20Emre" > HAKKIMIZDA </a>
+
+    </div>
+</body>
+</html>

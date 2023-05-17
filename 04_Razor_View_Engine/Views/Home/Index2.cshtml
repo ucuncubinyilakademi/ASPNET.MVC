@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+
+    string mesaj = "Sayfa Post Edildi.";
+
+    string htmlMetin = "<h1>Bu Bir Html Kodudur.</h1>";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <div>
+        @*<form action="/Home/Index" method="post">
+            <label>ADINIZ:</label>
+            <input type="text" name="ad" /><br />
+            <label>SOYADINIZ:</label>
+            <input type="text" name="soyad" /><br />
+            <button type="submit">GÖNDER</button>
+
+            @if (IsPost) { 
+                <h1>@mesaj</h1>
+            }
+        </form>*@
+
+        <!--String bir ifadenin içinde bulunan HTML komutlarının html komudu olarak kullanılmasını sağlar.-->
+        @Html.Raw(htmlMetin)
+    </div>
+</body>
+</html>
