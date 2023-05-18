@@ -1,0 +1,41 @@
+﻿@*@model List<_12_Models.Entities.User>*@
+
+@using _12_Models.Entities;
+@model List<User>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.Username</td>
+                <td>@item.Email</td>
+                <td>@item.Address</td>
+                <td>@item.Password</td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+

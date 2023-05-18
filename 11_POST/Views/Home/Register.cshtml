@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+<form action="/Home/Register" method="post">
+    <div class="mb-3">
+        @*<label class="form-label">First Name:</label>*@
+        <input type="text" class="form-control" name="isim" placeholder="Adınız..">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Last Name:</label>
+        <input type="text" class="form-control" name="soyisim">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email:</label>
+        <input type="email" class="form-control" name="email">
+    </div>
+    <button type="submit" class="btn btn-primary">KAYIT OL</button>
+</form>
+
+<br />
+<br />
+<br />
+
+
+
+<!--Default olarak method:GET-->
+<!--<form action="/Home/Login" method="post">
+    <input type="text" name="ad"/>
+    <button type="submit">GÖNDER</button>
+</form>-->
+
+@using (Html.BeginForm()) // Default method post tanımlıdır ve action olarak geldiği action'ın postuna gider.
+{
+    <label class="form-label">Adı:</label>
+    @Html.TextBox("isim", null, new { @class = "form-control", placeholder = "Adınız" })
+    <br />
+
+    <input type="text" class="form-control" name="isim" placeholder="Adınız..">
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

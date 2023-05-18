@@ -1,0 +1,23 @@
+﻿@model _12_Models.Models.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <h2>Login</h2>
+
+        <form action="/Home/Login" method="post">
+            @Html.ValidationSummary(false)
+            <div class="mb-3">
+                <input type="email" class="form-control" name="email" placeholder="Email Adresiniz..">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" name="password" placeholder="Şifreniz..">
+            </div>
+            <button type="submit" class="btn btn-primary">GİRİŞ</button>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
