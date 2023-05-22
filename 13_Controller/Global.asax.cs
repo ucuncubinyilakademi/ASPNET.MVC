@@ -13,6 +13,7 @@ namespace _13_Controller
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+           
         }
     }
 }
